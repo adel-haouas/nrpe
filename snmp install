@@ -1,5 +1,5 @@
 
-screen yum install net-snmp net-snmp-utils
+screen yum install net-snmp net-snmp-utils -y
 
 mv /etc/snmp/snmpd.conf /etc/snmp/snmpd.conf-`date +%Y%m%d`
 wget -nv -nc https://raw.githubusercontent.com/adel-haouas/nrpe/master/snmpd.conf -O /etc/snmp/snmpd.conf
