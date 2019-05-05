@@ -4,5 +4,7 @@ touch /var/log/nrpe.log ;chown nrpe:nrpe /var/log/nrpe.log
 firewall-cmd --permanent --add-service nrpe
 firewall-cmd --reload
 
+wget -nv -nc https://raw.githubusercontent.com/adel-haouas/nrpe/master/nrpe.cfg -O /etc/nagios/nrpe.cfg
+
 systemctl enable nrpe.service 
 systemctl restart nrpe.service
