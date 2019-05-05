@@ -1,4 +1,4 @@
-yum install -y nrpe nagios-plugins net-snmp nagios-plugins-{check-updates,load,http,users,procs,disk,swap,nrpe,uptime,perl,tcp,ssh,snmp,time,ping,mysql,dig,log,icmp,fping,uptime}
+yum install -y epel-release screen nrpe nagios-plugins net-snmp nagios-plugins-{check-updates,load,http,users,procs,disk,swap,nrpe,uptime,perl,tcp,ssh,snmp,time,ping,mysql,dig,log,icmp,fping,uptime}
 
 touch /var/log/nrpe.log ;chown nrpe:nrpe /var/log/nrpe.log 
 firewall-cmd --permanent --add-service nrpe
