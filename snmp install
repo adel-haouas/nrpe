@@ -1,0 +1,11 @@
+
+screen yum install net-snmp net-snmp-utils
+
+systemctl enable snmpd.service
+systemctl restart snmpd.service 
+
+firewall-cmd --permanent --add-service=snmp
+firewall-cmd --reload
+
+#Verify
+snmpwalk -v 2c -c HealthWaf  -O e 127.0.0.1 .1
