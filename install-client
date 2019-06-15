@@ -8,3 +8,12 @@ wget -nv -nc https://raw.githubusercontent.com/adel-haouas/nrpe/master/nrpe.cfg 
 
 systemctl enable nrpe.service 
 systemctl restart nrpe.service
+
+
+## if debian / ubuntu
+apt-get update
+apt-get install nagios-nrpe-server nagios-plugins
+
+#change allowed_hosts in /etc/nagios/nrpe.cfg
+chkconfig nagios-nrpe-server on
+service nagios-nrpe-server restart
