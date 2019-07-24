@@ -12,3 +12,6 @@ firewall-cmd --reload
 
 #Verify
 snmpwalk -v 2c -c COMMUNITY  -O e 127.0.0.1 .1
+
+## Debian / Ubuntu
+apt-get install snmpd
