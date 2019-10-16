@@ -11,7 +11,7 @@ firewall-cmd --permanent --add-service=snmp
 firewall-cmd --reload
 
 #Verify
-snmpwalk -v 2c -c COMMUNITY  -O e 127.0.0.1 .1
+snmpwalk -v 2c -c COMMUNITY  -O e 127.0.0.1 .1 |more
 
 ## Debian / Ubuntu
 apt-get install snmpd
