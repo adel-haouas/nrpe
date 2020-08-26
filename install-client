@@ -6,8 +6,7 @@ firewall-cmd --reload
 
 wget -nv -nc https://raw.githubusercontent.com/adel-haouas/nrpe/master/nrpe.cfg -O /etc/nagios/nrpe.cfg
 
-systemctl enable nrpe.service 
-systemctl restart nrpe.service
+systemctl enable --now nrpe.service 
 
 
 ## if debian / ubuntu
