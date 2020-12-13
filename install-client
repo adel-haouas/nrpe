@@ -14,5 +14,6 @@ apt-get update
 apt-get install nagios-nrpe-server nagios-plugins
 
 #change allowed_hosts in /etc/nagios/nrpe.cfg
+touch /var/log/nrpe.log ;chown nagios:nagios /var/log/nrpe.log
 chkconfig nagios-nrpe-server on
 service nagios-nrpe-server restart
